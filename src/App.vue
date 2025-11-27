@@ -1,6 +1,6 @@
 <template>
   <TheHeader title="RememberMe" />
-  <ResourcesList :resources="storedResources" />
+  <ResourcesList :resources="storedResources" @delete="removeResource" />
   <TheFooter />
 </template>
 
@@ -23,13 +23,12 @@ export default {
         { id: 2, title: 'Vue Router', url: 'https://router.vuejs.org', description: 'The official router for Vue.js.' },
         { id: 3, title: 'Vue Composition API', url: 'https://composition-api.vuejs.org', description: 'API for composing logic in Vue components.' },
         { id: 4, title: 'Vue Test Utils', url: 'https://test-utils.vuejs.org', description: 'Official testing utilities for Vue.js.' },
-        { id: 5, title: 'Vue Router', url: 'https://router.vuejs.org', description: 'The official router for Vue.js.' },
-        { id: 6, title: 'Vue Composition API', url: 'https://composition-api.vuejs.org', description: 'API for composing logic in Vue components.' },
-        { id: 7, title: 'Vue Test Utils', url: 'https://test-utils.vuejs.org', description: 'Official testing utilities for Vue.js.' },
-        { id: 8, title: 'Vue Router', url: 'https://router.vuejs.org', description: 'The official router for Vue.js.' },
-        { id: 9, title: 'Vue Composition API', url: 'https://composition-api.vuejs.org', description: 'API for composing logic in Vue components.' },
-        { id: 10, title: 'Vue Test Utils', url: 'https://test-utils.vuejs.org', description: 'Official testing utilities for Vue.js.' },
       ]
+    }
+  },
+  methods: {
+    removeResource(resourceId) {
+      this.storedResources = this.storedResources.filter(resource => resource.id !== resourceId);
     }
   }
 }
