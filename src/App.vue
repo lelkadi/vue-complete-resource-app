@@ -1,27 +1,18 @@
 <template>
   <TheHeader title="RememberMe" />
-  <ul>
-    <LearningResource
-      v-for="resource in storedResources"
-      :key="resource.id"
-      :id="resource.id"
-      :title="resource.title"
-      :url="resource.url"
-      :description="resource.description"
-    />
-  </ul>
+  <ResourcesList :resources="storedResources" />
   <TheFooter />
 </template>
 
 <script>
-import LearningResource from './components/LearningResource.vue';
+import ResourcesList from './components/ResourcesList.vue';
 import TheHeader from './components/layouts/TheHeader.vue';
 import TheFooter from './components/layouts/TheFooter.vue';
 
 export default {
   name: 'App',
   components: {
-    LearningResource,
+    ResourcesList,
     TheHeader,
     TheFooter
   },
