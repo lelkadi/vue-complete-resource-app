@@ -21,14 +21,8 @@
 </template>
 
 <script>
-import BaseCard from './ui/BaseCard.vue';
-import BaseButton from './ui/BaseButton.vue';
 export default {
     name: 'AddResource',
-    components: {
-        BaseCard,
-        BaseButton
-    },
     data() {
         return {
             title: '',

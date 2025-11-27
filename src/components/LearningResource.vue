@@ -30,8 +30,6 @@
 </template>
 
 <script>
-import BaseCard from './ui/BaseCard.vue';
-import BaseButton from './ui/BaseButton.vue';
 import BookIcon from './icons/BookIcon.vue';
 import ArrowRightIcon from './icons/ArrowRightIcon.vue';
 import TrashIcon from './icons/TrashIcon.vue';
@@ -39,8 +37,6 @@ import TrashIcon from './icons/TrashIcon.vue';
 export default {
   name: 'LearningResource',
   components: {
-    BaseCard,
-    BaseButton,
     BookIcon,
     ArrowRightIcon,
     TrashIcon

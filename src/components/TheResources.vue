@@ -9,16 +9,12 @@
 </template>
 
 <script>
-import BaseButton from './ui/BaseButton.vue';
-import BaseCard from './ui/BaseCard.vue';
 import ResourcesList from './ResourcesList.vue';
 import AddResource from './AddResource.vue';
 
 export default {
   name: 'TheResources',
   components: {
-    BaseButton,
-    BaseCard,
     ResourcesList,
     AddResource
   },

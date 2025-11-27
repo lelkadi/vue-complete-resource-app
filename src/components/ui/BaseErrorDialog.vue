@@ -7,12 +7,8 @@
 </template>
 
 <script>
-import BaseButton from './BaseButton.vue';
 export default {
     name: 'BaseErrorDialog',
-    components: {
-        BaseButton
-    },
     data() {
         return {
             dialogTitle: '',
