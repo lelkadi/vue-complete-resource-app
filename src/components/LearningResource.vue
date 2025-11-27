@@ -2,10 +2,7 @@
   <li>
     <BaseCard>
       <template #icon>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-          <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-        </svg>
+        <BookIcon />
       </template>
       
       <template #header>
@@ -18,23 +15,14 @@
         <BaseButton :href="url" variant="primary">
           <template #default>View Resource</template>
           <template #icon-right>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
+            <ArrowRightIcon />
           </template>
         </BaseButton>
         
         <BaseButton variant="danger" @click="$emit('delete', id)">
           <template #icon-left>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="3 6 5 6 21 6"></polyline>
-              <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
-              <line x1="10" y1="11" x2="10" y2="17"></line>
-              <line x1="14" y1="11" x2="14" y2="17"></line>
-            </svg>
+            <TrashIcon />
           </template>
-          <template #default>Delete</template>
         </BaseButton>
       </template>
     </BaseCard>
@@ -44,12 +32,18 @@
 <script>
 import BaseCard from './ui/BaseCard.vue';
 import BaseButton from './ui/BaseButton.vue';
+import BookIcon from './icons/BookIcon.vue';
+import ArrowRightIcon from './icons/ArrowRightIcon.vue';
+import TrashIcon from './icons/TrashIcon.vue';
 
 export default {
   name: 'LearningResource',
   components: {
     BaseCard,
-    BaseButton
+    BaseButton,
+    BookIcon,
+    ArrowRightIcon,
+    TrashIcon
   },
   props: {
     id: Number,
