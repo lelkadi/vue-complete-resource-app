@@ -47,7 +47,9 @@ export default {
       this.resources.unshift(newResource);
     },
     removeResource(resourceId) {
-      this.resources = this.resources.filter(resource => resource.id !== resourceId);
+      const index = this.resources.findIndex(resource => resource.id === resourceId);
+      this.resources.splice(index, 1);
+      console.log('removeResource called with ID:', resourceId);
     }
   }
 }

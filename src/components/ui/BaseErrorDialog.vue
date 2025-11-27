@@ -1,9 +1,11 @@
 <template>
-    <dialog ref="dialog">
-        <h2>{{ dialogTitle }}</h2>
-        <p>{{ dialogMessage }}</p>
-        <BaseButton @click="close" variant="secondary">OK</BaseButton>
-    </dialog>
+    <Teleport to="body">
+        <dialog ref="dialog">
+            <h2>{{ dialogTitle }}</h2>
+            <p>{{ dialogMessage }}</p>
+            <BaseButton @click="close" variant="secondary">OK</BaseButton>
+        </dialog>
+    </Teleport>
 </template>
 
 <script>

@@ -7,7 +7,7 @@
             :title="resource.title"
             :url="resource.url"
             :description="resource.description"
-            @delete="removeResource(resource.id)"
+            @delete="removeResource($event)"
         />
     </ul>
 </template>

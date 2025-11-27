@@ -5,7 +5,6 @@
     :target="href ? '_blank' : undefined"
     :rel="href ? 'noopener noreferrer' : undefined"
     :class="['base-btn', variant]"
-    @click="handleClick"
   >
     <slot name="icon-left"></slot>
     <span v-if="$slots.default">
@@ -27,13 +26,6 @@ export default {
     href: {
       type: String,
       default: null
-    }
-  },
-  methods: {
-    handleClick(event) {
-      if (!this.href) {
-        this.$emit('click', event);
-      }
     }
   }
 }
