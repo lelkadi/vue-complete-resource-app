@@ -22,7 +22,7 @@ export default {
     variant: {
       type: String,
       default: 'primary',
-      validator: (value) => ['primary', 'danger'].includes(value)
+      validator: (value) => ['primary', 'danger', 'secondary'].includes(value)
     },
     href: {
       type: String,
@@ -93,6 +93,23 @@ export default {
 }
 
 .primary:hover :deep(svg) {
+  transform: translateX(4px);
+}
+
+/* Secondary variant */ 
+.secondary {
+  background: linear-gradient(135deg, rgba(203, 40, 40, 0.262), rgba(149, 137, 137, 0.15));
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.secondary:hover {
+  background: linear-gradient(135deg, rgba(203, 40, 40, 0.262), rgba(149, 137, 137, 0.15));
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateX(4px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.secondary:hover :deep(svg) {
   transform: translateX(4px);
 }
 

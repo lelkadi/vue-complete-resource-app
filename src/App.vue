@@ -1,20 +1,20 @@
 <template>
   <TheHeader title="RememberMe" />
-    <ResourcesList />
-    <TheFooter />
+  <TheResources />
+  <TheFooter />
 </template>
 
 <script>
-import ResourcesList from './components/ResourcesList.vue';
+import TheResources from './components/TheResources.vue';
 import TheHeader from './components/layouts/TheHeader.vue';
 import TheFooter from './components/layouts/TheFooter.vue';
 
 export default {
   name: 'App',
   components: {
-    ResourcesList,
+    TheResources,
     TheHeader,
-    TheFooter
+    TheFooter,
   },
 }
 </script>
