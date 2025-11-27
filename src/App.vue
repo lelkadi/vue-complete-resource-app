@@ -1,6 +1,7 @@
 <template>
   <TheHeader title="RememberMe" />
   <TheResources />
+  <BaseErrorDialog ref="errorDialog" />
   <TheFooter />
 </template>
 
@@ -8,6 +9,7 @@
 import TheResources from './components/TheResources.vue';
 import TheHeader from './components/layouts/TheHeader.vue';
 import TheFooter from './components/layouts/TheFooter.vue';
+import BaseErrorDialog from './components/ui/BaseErrorDialog.vue';
 
 export default {
   name: 'App',
@@ -15,7 +17,18 @@ export default {
     TheResources,
     TheHeader,
     TheFooter,
+    BaseErrorDialog
   },
+  provide() {
+    return {
+      errorDialog: this.showErrorDialog 
+    }
+  },
+  methods: {
+    showErrorDialog(title, message) {
+      this.$refs.errorDialog.open(title, message);
+    }
+  }
 }
 </script>
 
